@@ -1,0 +1,85 @@
+\chapter{Innledning}
+\label{chap:intro}
+
+\section{Bakgrunn og problemkontekst}
+Det er en tydelig økning i bruken av kunstig intelligens for å automatisere komplekse klassifiseringsoppgaver, særlig innen kritiske områder som avfallshåndtering og gjenvinning \cite{fotovvatikhah2025, yevle2025}. Dette støttes av nyere systematiske oversikter som dokumenterer den raske framveksten av AI-baserte løsninger for avfallsklassifisering \cite{fotovvatikhah2025}. Disse systemene er i stor grad avhengige av store mengder treningsdata som er nøyaktig klassifisert, ettersom disse dataene utgjør det grunnleggende grunnlaget som modellen lærer av \cite{geiger2021}. Likevel ligger det en vesentlig svakhet i denne avhengigheten: modellens kvalitet står i direkte forhold til kvaliteten på dataene som mates inn, uavhengig av hvor avansert algoritmen er—ofte omtalt som “Garbage In, Garbage Out” \cite{geiger2021, heck2025}. Dette prinsippet fremheves også i helse- og samfunnsvitenskapelige sammenhenger der datakvalitet påvirker generaliseringsevne og beslutningsstøtte \cite{teno2023}.
+
+Problemet forsterkes når datainnsamlingen ikke utføres av datafaglige spesialister, men av personer i operative roller – som transportarbeidere og ansatte som sorterer avfall – som bruker mobilapplikasjoner i arbeidsmiljøer preget av tidspress og mange oppgaver \cite{muller2024, wenz2023}. For disse brukerne er datainnsamling ofte en sekundæroppgave som utføres parallelt med deres primære arbeidsoppgaver, ofte under tidspress og med begrenset teknisk bakgrunn \cite{muller2024}. Utfordringer knyttet til brukervennlighet i appens grensesnitt, uklare instruksjoner eller arbeidsflyt som ikke samsvarer med brukerens mentale modell, kan føre til at bilder tas under dårlige forhold, at feile eller tilfeldige klassifiseringer velges, at nødvendig metadata utelates, eller at registreringsprosessen avbrytes før den fullføres \cite{weichbroth2024, muller2024}. Selv om hver enkelt av disse avvikene kan virke ubetydelig, fører akkumuleringen til datasett som inneholder inkonsistenser og feil, noe som i stor grad reduserer modellens nøyaktighet og generaliseringsevne \cite{geiger2021, teno2023}. Derfor er brukervennlighet ikke bare en faktor som påvirker brukerens komfort, men en direkte avgjørende faktor for kvaliteten på treningsdataene \cite{muller2024, weichbroth2024}.
+
+Denne studien undersøker den grunnleggende sammenhengen mellom brukervennlighet i mobilapplikasjoner og kvaliteten og konsistensen i data som samles inn for kunstig intelligens-systemer \cite{weichbroth2024, wenz2023}.
+
+\section{Hvorfor?} 
+\begin{itemize}
+    \item Det finnes ingen app i dag som løser dette problemet i Stellai AS.
+    \item Jeg er veldig interssert i utvikling og ikke minst fokus på User Interface og User Experience.
+    \item Jeg vil føske på hvordan UX påvirker datakvalitet i AI-trening.
+    \item For å sikre at data faktisk kan brukes til AI.
+    \item For å unngå at brukere slutter å bruke løsningen.
+\end{itemize}
+
+\section{Beskrivelse av applikasjonen}
+
+Applikasjonen som ble evaluert i denne studien er en mobilbasert løsning utviklet for datainnsamling innen avfallshåndteringssektoren, bygget ved hjelp av React Native og Azure som skyinfrastruktur. Arbeidsflyten er oppgavebasert og organisert i flere trinn: brukeren logger inn, og registrerer avfall som ikke er plassert der det skal være. Denne prosessen utføres ved å ta et bilde eller laste opp et eksisterende bilde, deretter velge riktig avfallskategori fra et forhåndsdefinert sett med klassifikasjoner, fylle inn nødvendig metadata som beholdernummer og type kilde, og til slutt sende inn registreringen til skylagring, der dataene integreres i en treningspipeline for et KI‑basert klassifiseringssystem. Applikasjonen er utformet for å brukes av ansatte med varierte tekniske bakgrunner, og studien fokuserer spesifikt på samspillet mellom denne brukergruppen, arbeidsflyten og datakvaliteten.
+
+\section{Datainnsamling til AI-systemer og datakonsistens}
+
+Kvaliteten på treningsdata utgjør en viktig faktor for å bestemme ytelsen til maskinlæringsmodeller. Forskning viser at selv små mengder unøyaktig eller inkonsekvent klassifiserte data kan ha betydelige negative konsekvenser for modellens evne til å generalisere. I prosjekter som er avhengige av kollektiv datainnsamling (Crowdsourcing), fremstår utfordringen med å opprettholde konsistens som en sentral hindring.
+
+
+I denne oppgaven forstås \textit{datakonsistens} som at hver registrering har:
+\begin{itemize}
+    \item nødvendige metadata (for eksempel kundenummer og kjøreordre),
+    \item korrekt kobling mellom bilde(r) og aktiv registrering,
+    \item fravær av uønsket gjenbruk av tidligere data,
+    \item en tydelig overgang mellom ``før sending'' og ``etter sending''.
+\end{itemize}
+
+Datakonsistens handler dermed ikke bare om at data finnes, men at de samles inn på en måte som kan brukes videre uten omfattende manuell opprydding. Applikasjonens arbeidsflyt og håndtering av lagring og nullstilling får derfor direkte betydning for kvaliteten på dataene som sendes til skylagring.
+
+\section{Brukervennlighet i oppgaveorienterte mobilapplikasjoner}
+Oppgaveorienterte mobilapplikasjoner kjennetegnes ved at brukeren har et konkret mål som skal løses raskt og korrekt, ofte i en arbeidssituasjon med begrenset tid og oppmerksomhet. I en slik kontekst er brukbarhet tett knyttet til at systemet støtter effektiv gjennomføring av oppgaven og reduserer sannsynligheten for feil.
+
+For denne applikasjonen innebærer dette at brukeren skal kunne:
+\begin{itemize}
+    \item forstå arbeidsflyten og rekkefølgen av steg,
+    \item fullføre registrering uten unødvendige handlinger,
+    \item unngå feil som gir datatap eller feil innsending,
+    \item oppleve at systemet er forutsigbart og pålitelig.
+\end{itemize}
+
+Brukertesting er derfor et sentralt virkemiddel for å avdekke hvor i arbeidsflyten brukere blir usikre, gjør feil eller mister informasjon. Slike funn gir konkret grunnlag for forbedringer både i grensesnittet og i den tekniske logikken som støtter registreringsprosessen.
+
+\section{Systemtilstand, persistens og reset i flertrinns arbeidsflyt}
+
+Håndtering av systemtilstand er en avgjørende faktor for brukervennlighet i oppgaveorienterte applikasjoner. I en arbeidsflyt med flere trinn, slik som i applikasjonen som studeres, må brukeren forstå hvor i prosessen han eller hun befinner seg, hvilke data som allerede er registrert, og hva som gjenstår. Dersom applikasjonen ikke bevarer ufullstendige registreringer når arbeidsflyten avbrytes, kan brukeren bli tvunget til å starte på nytt. Dette kan redusere motivasjon og øke risikoen for gjentatte feil \cite{norman2013}.
+
+Det ble også identifisert at manglende tydelighet i systemets status kan være en betydelig kilde til frustrasjon. Når det ikke kommer klart frem om en registrering er lagret, sendt inn eller slettet, kan det skape usikkerhet og øke risikoen for problemer knyttet til dataintegritet. Dette er særlig relevant i denne studien, ettersom arbeidsflyten består av flere trinn og er avhengig av at brukeren fullfører alle steg korrekt for å sikre pålitelighet og nøyaktighet i datasettet.
+
+I denne typen arbeidsflyt blir tre mekanismer spesielt kritiske:
+\begin{itemize}
+    \item \textbf{Persistens:} Informasjon brukeren har skrevet inn må bevares ved navigasjon mellom steg, for eksempel dersom kundenummer og kjøreordre fylles inn før brukeren går til kamera og kommer tilbake.
+    \item \textbf{Reset etter innsending:} Når en registrering er sendt, må neste registrering starte i tom tilstand. Dersom tidligere data blir liggende igjen, øker risikoen for duplikater og feil koblinger.
+    \item \textbf{Tydelige tilstandsoverganger:} Brukeren må kunne forstå hva som inngår i aktiv registrering, når registreringen er fullført, og at systemet er klart for neste.
+\end{itemize}
+
+
+\section{Problemstilling og forskningsspørsmål}
+\label{sec:problemstilling}
+På bakgrunn av behovet for strukturert datainnsamling og identifiserte utfordringer knyttet til systemtilstand, undersøker studien hvordan applikasjonens brukbarhet og tekniske håndtering av tilstand påvirker datakvaliteten.
+
+\subsection*{Problemstilling}
+Hvordan kan brukersentrert design av en mobilapp for ansatte i avfallsbransjen (med ulik teknisk kompetanse) støtte trygg og effektiv innsamling av bilde, kategori og metadata, slik at registreringene blir konsistente og klare for videre bruk (fakturering/AI-trening)?
+
+\subsection*{Forskningsspørsmål}
+\begin{enumerate}
+    \item - Hvordan opplever ansatte med ulik teknisk kompetanse brukervennligheten i registreringsflyten (bilde → kategori → metadata → innsending), spesielt med tanke på forutsigbarhet, feil og fullføring?
+
+    \item - Hvordan påvirker utformingen av brukergrensesnittet (f.eks. tydelige knapper, tilbakemeldinger og konsistens) brukerens forståelse av systemets tilstand – inkludert hva som er lagret, sendt og nullstilt?
+
+    \item - Hvilke typer brukerfeil og datainkonsistenser oppstår i registreringsflyten, og hvordan henger disse sammen med systemets håndtering av tilstand og brukerens mentale modell?
+
+    \item - Hvilke konkrete forbedringer i design og implementasjon kan redusere feil og styrke datakvaliteten i registreringene?
+
+
+
+\end{enumerate}

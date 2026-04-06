@@ -1,0 +1,85 @@
+\chapter{Metode}
+
+\section{Forskningsdesign}
+
+Studien gjennomføres som en evaluativ brukbarhetsstudie av en mobilapplikasjon for datainnsamling. Målet er å identifisere friksjon og feil knyttet til systemtilstand og vurdere konsekvenser for datakonsistens.
+
+Designet kombinerer:
+
+\begin{itemize}
+\item Scenario-basert brukertesting
+\item Think-aloud-protokoll
+\item Semistrukturert intervju
+\end{itemize}
+
+Tilnærmingen gjør det mulig å dokumentere både observerbar atferd og brukerens forståelse og forventninger.
+
+\section{Deltakere og rekruttering}
+
+Utvalget er strategisk for å belyse forskjeller mellom tekniske og ikke-tekniske brukere. Planlagt utvalg inkluderer:
+
+\begin{itemize}
+\item Ikke-tekniske brukere fra avfalls-/transportkontekst
+\item Tekniske brukere med systemforståelse
+\end{itemize}
+
+Rekruttering skjer etter godkjenning fra Sikt.
+
+\section{Testoppsett og datainnsamling}
+
+Scenario-baserte oppgaver er konstruert for å fremprovosere kritiske tilstandsoverganger i applikasjonen (persistens, navigasjon, innsending og reset).
+
+\subsection{Think-aloud}
+
+Deltakere verbaliserer tanker under oppgaveløsning, noe som gir innsikt i mental modell og forventninger. Metoden er forankret i protokollanalyse \cite{ericsson1993}.
+
+\subsection{Semistrukturert intervju}
+
+Etter test gjennomføres intervju om forståelse av lagring, sending og reset. Dette utdyper observasjoner.
+
+\section{Operasjonalisering av begreper}
+
+Begrepene fra kapittel \ref{chap:theory} operasjonaliseres som indikatorer:
+
+\begin{itemize}
+\item Systemtilstand: metadata-tap, ghost-data
+\item Mental modell: uttrykt mismatch
+\item Error prevention: behov for manuell opprydding
+\item Datakonsistens: mangler, duplikater, feilkoblinger
+\end{itemize}
+
+\section{Analysemetode}
+
+Data analyseres ved tematisk analyse \cite{braun2006}. Observasjoner, think-aloud og intervjudata kodes og grupperes i tema relatert til:
+
+\begin{itemize}
+\item Tilstandsuklarhet
+\item Persistensproblemer
+\item Resetproblemer
+\item Mental model mismatch
+\item Datainkonsistens
+\end{itemize}
+
+\section{Kvalitet i studien}
+
+Troverdighet styrkes gjennom:
+
+\begin{itemize}
+\item Datatriangulering
+\item Standardisert oppgavesett
+\item Tydelig teori–analyse-kobling
+\end{itemize}
+
+\section{Forskerrolle og bias}
+
+I denne studien har jeg en dobbeltrolle som utvikler av mobilapplikasjonssystemet og som gjennomfører brukertestene. Applikasjonen ble utviklet gjennom et samarbeid mellom Stellai AS og Universitetet i Agder (UiA), og løsningen ble designet og implementert i løpet av perioden for masteroppgaven. Denne rollen ga en dyp forståelse av hvordan systemets funksjoner fungerer og hvilken kontekst de inngår i, men innebærer også en risiko for skjevhet i utformingen av studien, gjennomføringen og tolkningen av resultatene.
+
+\textbf{Design-bias.}
+Siden forskeren selv har utviklet applikasjonen, kan forskeren være tilbøyelig til å vurdere designvalg mer positivt enn nødvendig, eller ubevisst favorisere den eksisterende applikasjonen i testoppsettet. For å forhindre denne muligheten ble oppgavene i brukertestene utformet for å fremkalle avgjørende tilstandsendringer i applikasjonen (persistens, navigasjon, innsending og tilbakestilling), uavhengig av forventet korrekt bruk. Resultatene ble analysert ved hjelp av forhåndsdefinerte indikatorer (tap av metadata, fiktive data, tilbakestillingsfeil og avbrudd i prosessen) for å sikre konsistent vurdering mellom alle deltakerne.
+
+\textbf{Observatørbias.}
+Når utvikleren selv fungerer som testleder, kan deltakerne endre atferden sin eller svarene sine, for eksempel ved å unngå kritikk eller forsøke å «gjøre det riktig». For å redusere denne effekten ble det presisert at det er systemet som testes, ikke deltakeren. I tillegg ble tenke-høyt-metoden brukt for å registrere spontane reaksjoner under oppgaveløsningen, og testlederen unngikk å forklare funksjoner eller gi veiledning.
+
+\textbf{Reduksjon av tolkingsbias.}
+Reduksjon av tolkningsskjevhet: Studien benytter datatriangulering ved å kombinere observasjon av oppgaveløsning, tenke-høyt-data og intervju­respons. Analysen ble gjennomført objektivt basert på konsepter fra teorikapittelet, slik at tolkningen bygger på systematiske mønstre i datamaterialet fremfor individuelle inntrykk.
+

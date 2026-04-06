@@ -1,0 +1,34 @@
+\chapter{State of the art}
+\label{chap:state}
+
+\section{Mobil datainnsamling i arbeidskontekst}
+\label{sec:sota}
+
+Datainnsamling via mobiltelefoner har nylig økt i operative arbeidssammenhenger, der ansatte registrerer notater, bilder og metadata som en del av arbeidsflyten sin. Disse systemene brukes ofte av ikke-tekniske brukere under tidspress og parallelt med sine primære oppgaver, noe som gjør datainnsamling til en sekundær oppgave i arbeidsdagen \cite{wenz2023}. Forskning viser at aksept og kvalitet på datainnsamling fra mobiltelefoner påvirkes av brukerens kontekst, arbeidsmengde og kompleksiteten i registreringsprosessen \cite{wenz2023}.
+
+Disse situasjoner kan utilstrekkelig støtte i mobilapplikasjons brukergrensesnitt føre til avbrutte regsteringer, manglende informajson eller feil klassifiseringer, og dette gjør at innsamlende data blir svakere og reduser kvalitet \cite{muller2024}. 
+
+\subsection{Datakonsistens som forutsetning for videre AI-bruk}
+Datakvalitet kan forstås som mer enn nøyaktighet alene; data må også være relevante, konsistente og anvendbare for den som skal bruke dem videre \cite{wang1996}. I en mobil registreringskontekst betyr dette at hver registrering må være komplett (nødvendige metadata er tilstede), entydig (unngå duplikater) og korrekt koblet (bilde og metadata må tilhøre samme registrering). Dersom innsamlet data må renses eller rekonstrueres manuelt i etterkant, reduseres effektiviteten og påliteligheten til datasettet som grunnlag for AI-relaterte prosesser.
+
+\subsection{Brukervennlighet i oppgaveorienterte mobilapplikasjoner}
+Oppgaveorienterte mobilapplikasjoner vurderes at brukeren skal fullføre et konkret mål med lav feilrate og dette ofte blir under begrenset tid og oppmerksomhet. I slike løsninger blir brukervennlighet koblet mot hvor effektiv gjennomføring av rbeidsflyten og til å redusere forekomsten av feil \cite{weichbroth2024}. Nielsens heuristikker gir et operasjonelt grunnlag for å analysere hvor og hvorfor brukerfeil oppstår, blant annet gjennom \textit{visibility of system status}, \textit{consistency and standards} og \textit{error prevention} \cite{nielsen1994}. 
+I datainnsamling applikasjoner kan slike brukervennlighetsproblemer få direkte konsekvenser for datakvaliteten, ettersom feil i interaksjon kan føre til ufullstendige i manglende eller inkonsistente registreringer \cite{muller2024}. 
+
+\subsection{Systemtilstand i flertrinns arbeidsflyt: persistens og reset}
+Systemtilstand er et sentralt begrep for HCI og dette omfatter hvilke data systemet innholder og hvordan denne informasjonen endres via brukerhandlinger og navikasjon \cite{norman2013}.
+
+I mobile applikasjoner hvor registrering består av flere steg, er håndtering av systemtilstand en grunnlegende forutsetning for at brukeren skal oppleve arbeidsflyten som stabil og forutsigbar.
+
+I oppgaveorienterte mobilapplikasjoner er det tre mekanismer som skiller seg ut som kritiske: prosessen for å lagre ufullstendige data, viktigheten av tydelige tilstandsoverganger og metoden for tilbakestilling etter at opptaksoppgaven er fullført. Derfor kan eventuelle mangler i disse mekanismene føre til datatap, duplisering eller feil kobling mellom opptak.
+
+\subsection{Datakvalitet i menneskegenerert datainnsamling}
+Datakvalitet begrenser seg ikke til innsamlingen av menneskeskapte data eller til selve tilstedeværelsen av data, men avhenger også av hvor fullstendige og konsistente de er, samt hvordan de kobles korrekt til riktig kontekst. Forskning på datakvalitet understreker dimensjoner som fullstendighet, unikhet og korrekt sammenkobling mellom datapunkter\cite{wang1996}. 
+
+Ved innsamling av data via mobile enheter kan brukerfeil føre til tap av metadata, dupliserte registreringer eller feil kobling mellom bilder og registreringer \cite{muller2024}. Slike inkonsistenser oppstår ofte som et resultat av interaksjonen med brukergrensesnittet, og ikke på grunn av tekniske feil i lagringssystemet. Derfor er datakvaliteten i slike systemer direkte knyttet til hvordan brukergrensesnittet og arbeidsflyten støtter korrekt registrering \cite{weichbroth2024}.
+
+\subsection{Oppsummering og forskningsmessig gap}
+Tidligere forskning har i hovedsak fokusert på å undersøke brukervennlighet i mobilapplikasjoner \cite{weichbroth2024} eller datakvalitet i brukerbasert datainnsamling \cite{wang1996}. Forskning viser også at systemtilstand og tydelighet rundt denne er avgjørende for korrekt brukerinteraksjon i systemer med flere trinn \cite{nielsen1994}.
+
+I denne sammenhengen undersøker denne studien sammenhengen mellom brukergrensesnitt og datakvalitet i et mobilt applikasjonssystem for innsamling av bilder og data. Den gjennomfører også brukertester av en oppgaveorientert applikasjon som benyttes i en arbeidssituasjon. Analysen vil omfatte hvordan datakontinuitet, tilstandsoverganger og tilbakestilling påvirker brukerhandlinger og kvaliteten på registreringene.
+Dermed vil denne studien gi et empirisk kunnskapsbidrag om hvordan utforming og håndtering av systemtilstand i mobile datainnsamlingsløsninger kan påvirke kvaliteten på menneskegenererte data, og den vil identifisere designimplikasjoner for mer pålitelige datainnsamlingssystemer.

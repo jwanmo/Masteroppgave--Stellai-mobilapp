@@ -1,0 +1,68 @@
+\chapter{Teoretisk rammeverk}
+\label{chap:theory}
+
+\section{Innledning og avgrensning}
+
+Formålet med studien er å undersøke hvordan brukbarvennlighet og håndtering av systemtilstand i en mobilapplikasjon påvirker kvaliteten og konsistensen på data som samles inn for senere bruk i et AI-system. Det teoretiske rammeverket er derfor avgrenset til teori som støtter (1) analyse av brukerinteraksjon i flertrinns arbeidsflyt, (2) tolkning av feil og misforståelser knyttet til systemets interne tilstand, og (3) sammenhengen mellom brukerfeil og datakonsistens.
+
+Rammeverket består av fire deler: (a) systemtilstand og synlighet/tilbakemelding, (b) mentale modeller, (c) heuristiske prinsipper knyttet til feilforebygging og konsistens, og (d) datakonsistens sett i et data-centric AI-perspektiv.
+
+\section{Systemtilstand i interaktive systemer}
+
+Systemtilstand viser til hvilke data systemet holder i en gitt situasjon, og hvordan denne tilstanden endres gjennom brukerhandlinger og skjermoverganger. I mobile applikasjoner med flertrinns arbeidsflyt blir systemtilstand særlig kritisk fordi data typisk finnes i flere lag samtidig: komponent-state, navigasjons-state og persistent state.
+
+I denne studien forstås systemtilstand operasjonelt som:
+
+\begin{itemize}
+\item Utkast-/sesjonstilstand (midlertidige data for én registrering)
+\item Persistens (om data overlever navigasjon eller skjermbytte)
+\item Transaksjonell innsending (overgang fra ikke sendt til sendt)
+\item Reset/ny registrering (nullstilling etter innsending)
+\end{itemize}
+
+Feil i systemtilstand oppstår når applikasjonens interne tilstand ikke samsvarer med brukerens forventning om hva som er lagret, sendt eller nullstilt. Dette knyttes til prinsippet \textit{visibility of system status} \cite{nielsen1994}.
+
+\section{Mentale modeller og brukerforståelse}
+
+Brukere utvikler mentale modeller av hvordan et system fungerer basert på erfaring og tilbakemeldinger. Når systemets faktiske logikk avviker fra denne modellen, oppstår mismatch som kan føre til feil og redusert tillit.
+
+I denne studien analyseres mismatch gjennom observasjon og think-aloud-data, der brukerens uttrykte forventninger sammenholdes med systemets faktiske oppførsel. Dette perspektivet er forankret i klassisk HCI-litteratur om konseptuelle modeller og systemforståelse \cite{norman2013}.
+
+\section{Error prevention og konsistens som analytiske kriterier}
+
+For å analysere konkrete forbedringsbehov i grensesnitt og arbeidsflyt benyttes et avgrenset sett av Nielsens  (1994)~\cite{nielsen1994heuristics}. heuristikker – ikke som “definisjon av usability”, men som analytiske kriterier for å kategorisere og begrunne funn.
+
+\begin{itemize}
+\item \textbf{Visibility of system status:} om det er tydelig for brukeren hva som er lagret, sendt eller aktivt i den pågående registreringen. Systemet skal kontinuerlig kommunisere sin tilstand gjennom passende tilbakemeldinger.
+
+\item \textbf{Consistency and standards:} om arbeidsflyt og systematferd er forutsigbar på tvers av skjermoverganger og registreringer, slik at like handlinger gir like resultater.
+
+\item \textbf{Error prevention:} om design og implementasjon forebygger feil som datatap og duplikater, for eksempel ved at en ny registrering starter i tom tilstand uten behov for manuell opprydding.
+
+\item \textbf{User control and freedom:} om brukeren har mulighet til å angre eller korrigere handlinger uten høye kostnader, eksempelvis ved å unngå manuell sletting av tidligere bilder.
+\end{itemize}
+
+Disse konkretiserer hva brukbarhet betyr i en datainnsamlingskontekst: lav feilrate, høy forutsigbarhet og tydelig status gjennom registreringsløpet \cite{nielsen1994}.
+
+\section{Datakonsistens og data-centric AI}
+
+Formålet med applikasjonen er å produsere treningsdata av høy kvalitet. Datakvalitet forstås her som oppgave-relevant, konsistent og korrekt koblet informasjon \cite{wang1996}. Et data-centric AI-perspektiv fremhever at forbedring av datainnsamling er avgjørende for AI-systemers ytelse \cite{jakubik2024}.
+
+Datakonsistens operasjonaliseres ved:
+
+\begin{itemize}
+\item Completeness (metadata tilstede)
+\item Uniqueness (ingen duplikater)
+\item Correct linkage (riktig bilde–metadata)
+\item State integrity (ingen lekkasje mellom registreringer)
+\end{itemize}
+
+\section{Teoretisk sammenheng (forskningsmodell)}
+
+Den teoretiske sammenhengen formaliseres slik:
+
+\begin{quote}
+Systemtilstand $\rightarrow$ status-synlighet $\rightarrow$ mental modell $\rightarrow$ feilrate $\rightarrow$ datakonsistens
+\end{quote}
+
+Modellen brukes i analyse- og diskusjonskapittelet for å koble funn til design- og implementasjonsendringer.

@@ -1,0 +1,46 @@
+\begin{titlepage}
+\thispagestyle{empty}
+
+% Bakgrunn: 1 side, alltid riktig størrelse
+\AddToShipoutPictureBG*{%
+  \put(0,0){%
+    \includegraphics[width=\paperwidth,height=\paperheight]{Figures/Frontpage/forside_master_nor.pdf}%
+  }%
+}
+
+%%%% Custom Data %%%%
+\newcommand{\projectTitle}{%
+Ved å utvikle en brukervennlig mobilapplikasjon for avfallsbransjen kan man sikre innsamling av datakvalitet som kan brukes til å trene AI-modeller.
+}
+\newcommand{\projectSubTitle}{MM-506-G og MM-500-G}
+\newcommand{\authors}{%
+Jwan Ibrahim Mohammad\\
+Kandidatnr: 000%
+}
+\newcommand{\supervisor}{%
+Rune Andersen – Fakultet for teknologi og realfag, UiA\\
+Haakon Lied Sundbø – Fakultet for teknologi og realfag, UiA%
+}
+\newcommand{\projectYear}{2026}
+\newcommand{\facultyName}{Fakultet for teknologi og realfag}
+\newcommand{\departmentName}{Institutt for ingeniørvitenskap}
+
+%%%% Layout (bruk vfill i stedet for 8cm) %%%%
+\vspace*{4.8cm}
+
+{\LARGE \textbf{\projectTitle}}\\[0.9cm]
+{\large \projectSubTitle}\\[1.4cm]
+{\large \authors}
+
+\vfill
+
+{\Large \textbf{VEILEDER}}\\[0.3cm]
+{\normalsize \supervisor}
+
+\vfill
+
+\textbf{Universitetet i Agder, \projectYear}\\
+\small{\facultyName\\\departmentName}
+
+\ClearShipoutPictureBG
+\end{titlepage}

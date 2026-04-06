@@ -1,0 +1,116 @@
+\chapter{Diskusjon (uten resultater) -- plan for funn og kobling til forskningsspørsmål}
+
+I dette kapittelet beskrives hvordan resultatene fra de planlagte brukertestene skal diskuteres og knyttes til forskningsspørsmålene (RQ1–RQ4) og problemstillingen. På tidspunktet for utarbeidelsen av denne versjonen er brukertestene ennå ikke gjennomført, og kapitlet inneholder derfor ingen empiriske resultater. I stedet presenteres en struktur for (1) hvilke typer resultater som forventes å følge av de metodiske valgene, (2) hvordan resultatene skal tolkes i lys av teorikapitlet, og (3) hvordan hvert forskningsspørsmål skal besvares på en måte som bygger på problemstillingen \cite{weichbroth2024,ericsson1993,braun2006}.
+
+\section{Hva de metodiske valgene forventes å gi av funn}
+Denne studien er utformet som en evalueringsstudie av brukervennlighet, og det ble gjennomført tester basert på scenarier, tenke-høyt-teknikken og semistrukturerte intervjuer \cite{weichbroth2024,ericsson1993}. Det ble tatt hensyn til valg av metode for å avdekke både:
+(a) observerbare atferder og feil i registreringsprosessen, og
+(b) brukerens mentale modeller og forventninger knyttet til lagring, innsending og tilbakestilling.
+\begin{itemize}
+  \item \textbf{Scenario-basert brukertesting:} Det forventes at brukertesten basert på scenarier vil avdekke punktene der brukerne stopper opp, avviker fra prosessen eller avbryter den helt, eller utfører handlinger som kan skape inkonsistens i dataene (for eksempel gjentatt innsending, feil rekkefølge eller å hoppe over trinn). Dette er avgjørende for å fremkalle kritiske tilstandsendringer i systemet (lagring, navigasjon, innsending og tilbakestilling)\cite{weichbroth2024}.
+  \item \textbf{Think-aloud:} Analysen av Think-aloud er forventet å gi direkte innsikt i hva brukerne tror at systemet ‘husker’, hva de forventer at blir lagret, og hvordan de tolker systemtilstanden (‘lagret’, ‘sendt’, ‘slettet’). Dette gir et empirisk grunnlag for å identifisere manglende samsvar i den mentale modellen \textit{mental model mismatch}. \cite{ericsson1993,norman2013}
+  \item \textbf{Semistrukturert intervju} De semistrukturerte intervjuene er forventet å gi etterfølgende begrunnelse og klargjøring: hvorfor brukeren utførte en bestemt handling, hvilke signaler i brukergrensesnittet som ble oversett, og hvilke forbedringer brukeren mener vil gjøre arbeidsflyten mer forutsigbar \cite{weichbroth2024}.
+\end{itemize}
+
+I  analysen skal funnene organiseres i tråd med tematisk analyse, ved bruk av koder som samsvarer med definisjonene i metodekapitlet: \textit{uklar systemtilstand}, \textit{persistensproblemer}, \textit{resetproblemer}, \textit{mental model mismatch} og \textit{datainkonsistens}. \cite{braun2006}
+
+\section{Teoretisk forankring for diskusjonen}
+
+Diskusjonen vil bygges på tre sentrale teoretiske konsepter som tidligere er forklart i oppgaven::
+\begin{enumerate}
+  \item \textbf{Systemtilstand og status-synlighet}: Når systemets interne tilstand (utkast, lagring, innsending, tilbakestilling) ikke er klar eller konsistent, øker risikoen for feil og misforståelser \cite{nielsen1994heuristics}.
+  \item \textbf{Mentale modeller}: Brukere handler basert på antakelser om hvordan systemet fungerer.
+Manglende samsvar mellom den mentale modellen og systemets faktiske funksjonalitet fører til friksjon, feil og redusert tillit \cite{norman2013}.
+  \item \textbf{Datakvalitet/datakonsistens}: Kvalitet forstås her som noe som går utover nøyaktighet; fullstendighet, unikhet og korrekt kobling (bilde – metadata) er nødvendige for fremtidig bruk \cite{wang1996}.
+\end{enumerate}
+
+Forskningsmodellen i oppgaven presenterer en tydelig kausal kjede som vil bli brukt i drøftingen for å forklare funnene: \emph{systemtilstand} $\rightarrow$ \emph{status-synlighet} $\rightarrow$ \emph{mental modell} $\rightarrow$ \emph{feilrate} $\rightarrow$ \emph{datakonsistens}. Denne modellen brukes som et rammeverk for å knytte brukeropplevelsesproblemer til konkrete former for datainkonsistens i registreringsprosessen \cite{nielsen1994heuristics,norman2013,wang1996}.
+
+\section{Diskusjon og ``funn''-typer koblet til forskningsspørsmål}
+
+For å belyse problemstillingen er det formulert fire forskningsspørsmål som dekker ulike aspekter av brukeropplevelse, systemtilstand og datakvalitet i registreringsflyten. Spørsmålene er utformet med utgangspunkt i det teoretiske rammeverket og bygger på antakelsen om at svakheter i brukergrensesnitt og teknisk implementasjon kan føre til feil og inkonsistente data. I dette kapittelet presenteres hvert forskningsspørsmål med tilhørende datakilder, forventede funntyper, teoretisk forankring og hvordan det bidrar til å besvare problemstillingen.
+
+
+\subsection{RQ1:- Hvordan opplever ansatte med ulik teknisk kompetanse brukervennligheten i registreringsflyten (bilde → kategori → metadata → innsending), spesielt med tanke på forutsigbarhet, feil og fullføring?
+}
+
+\textbf{Funnkilder:} Observasjoner under gjennomføring av scenariobaserte oppgaver + tenke‑høyt‑data + intervjusvar om flyt, kontroll og forutsigbarhet.
+
+\textbf{Forventede funntyper.}
+\begin{itemize}
+  \item  Punkter i arbeidsflyten der brukerne føler usikkerhet ("Hvor er jeg i prosessen?").
+  \item Situasjoner der brukerne søker bekreftelse på hva som er lagret/sendt.
+  \item Ulike mønstre mellom tekniske og ikke‑tekniske deltakere (for eksempel at tekniske deltakere tester systemets grenser, mens ikke‑tekniske deltakere følger grensesnittet bokstavelig).
+\end{itemize}
+
+\textbf{Teorikobling: } Resultatene diskuteres hovedsakelig i lys av tydeligheten og konsistensen i systemtilstanden og kriteriene for denne, med fokus på hvordan brukergrensesnittet formidler tilstanden i en flertrinns arbeidsflyt \cite{nielsen1994heuristics}.
+
+\textbf{Bidrag til problemstilling.} RQ1 bygger på argumentet om at den opplevde (manglende) forutsigbarheten i brukergrensesnittet henger sammen med en økt risiko for registreringsfeil, noe som igjen kan påvirke datakonsistensen.
+
+\subsection{RQ2: Hvordan påvirker utformingen av brukergrensesnittet (f.eks. tydelige knapper, tilbakemeldinger og konsistens) brukerens forståelse av systemets tilstand – inkludert hva som er lagret, sendt og nullstilt?}
+
+\textbf{Funnkilder.} Think-aloud («jeg trodde at den ville huske!»), intervjusvar om lagring, innsending og tilbakestilling, samt observasjoner av kontrollhandlinger (tilbake, manuell «rengjøring»).
+
+\textbf{Forventede funntyper.}
+\begin{itemize}
+  \item \textbf{Persistensforventning}:  Her vil brukeren forvente at metadata forblir lagret etter navigasjon mellom sider.
+
+  \item \textbf{Resetforventning}: Her vil brukeren forvente en tom tilstand etter at bilder og informasjon er sendt inn.
+  \item \textbf{Transaksjonsforventning}: Brukeren forventer et tydelig sluttpunkt («for eksempel ved registrering av en ny konto bør man automatisk gå til innloggingssiden»).
+\end{itemize}
+
+\textbf{Teorikobling.} Funn tolkes som \emph{mental model mismatch} der systemets konseptuelle modell (det systemet faktisk gjør) ikke fremgår gjennom brukergrensesnittets signaler og tilbakemeldinger \cite{norman2013,nielsen1994heuristics}.
+
+\textbf{Bidrag til problemstilling.} RQ2 forklarer \emph{hvorfor} manglende samsvar i forståelsen av lagring/tilbakestilling kan føre til handlinger som resulterer i tap av metadata, duplikater eller sammenkoblingsfeil".
+
+\subsection{RQ3: - Hvilke typer brukerfeil og datainkonsistenser oppstår i registreringsflyten, og hvordan henger disse sammen med systemets håndtering av tilstand og brukerens mentale modell?}
+
+\textbf{Funnkilder.} Observasjonslogg (feiltyper), oppgaveløsning, samt etterintervju for å forstå årsak.
+
+\textbf{Forventede funntyper (i tråd med operasjonaliseringen).}
+\begin{itemize}
+  \item \textbf{Metadata-tap} (persistensfeil): data forsvinner ved skjermbytte/navigasjon.
+  \item \textbf{Ghost-data/lekkasje} (resetfeil): tidligere data vises i ny registrering.
+  \item \textbf{Feilkobling bilde--metadata} (koblingsfeil): feil sammenstilling i aktiv registrering.
+  \item \textbf{Statusuklarhet} (``sendt'' er uklart): kan gi dobbel innsending eller unødvendige kontrollhandlinger.
+\end{itemize}
+
+\textbf{Teorikobling.} Diskusjonen kobler feil til heuristikkene \emph{error prevention} og \emph{consistency}, samt til datakvalitetsdimensjoner som \emph{completeness}, \emph{uniqueness} og \emph{correct linkage}. \cite{nielsen1994heuristics,wang1996}
+
+\textbf{Bidrag til problemstilling.} RQ3 viser \emph{hvordan} UX- og systemtilstandsproblemer materialiserer seg som konkrete datainkonsistenser.
+
+\subsection{RQ4:- Hvilke konkrete forbedringer i design og implementasjon kan redusere feil og styrke datakvaliteten i registreringene?}
+
+\textbf{Funnkilder.} en kombinasjon av (a) de ulike mønstrene av problemer avledet fra forskningsspørsmål RQ1 til RQ3, og (b) brukernes forslag fra intervjuene.
+
+\textbf{Forventet diskusjonsstruktur.}
+\begin{enumerate}
+  \item \textbf{UI-tiltak}: statusindikatorer, tydelighet rundt «aktiv registrering», eksplisitt bekreftelse ved innsending, og synlighet av «ny registrering» etter tilbakestilling.
+  \item \textbf{Arbeidsflyt‑målinger}: rekkefølge, validering før innsending og reduksjon av kognitiv belastning
+  \item \textbf{Implementasjons‑målinger:}: sterk datakontinuitet (inkludert utkastlagring), tydelig logikk for tilbakestilling og klar håndtering av «før/etter innsending»-tilstander.
+\end{enumerate}
+
+\textbf{Teorikobling.} Hver måling begrunnes ved å vise til det heuristiske prinsippet eller den delen av forskningsmodellen som den adresserer (for eksempel «økt tydelighet i systemtilstanden» eller «redusert mental modell‑mismatch») \cite{nielsen1994heuristics,norman2013}.
+
+\textbf{Bidrag til problemstilling.} RQ4 oppsummerer studiens praktiske bidrag: hvilke endringer som sannsynligvis kan styrke datakonsistensen gjennom forbedret brukeropplevelse og bedre håndtering av systemtilstand."**
+
+\section{Syntese: fra forskningsspørsmål til problemstilling}
+Etter gjennomføringen av brukertestene bør drøftingen avsluttes med en oppsummering som tydelig besvarer forskningsspørsmålet ved å integrere spørsmål RQ1 til RQ4:
+
+\begin{itemize}
+  \item RQ1 identifiserer utfordringene brukerne møtte og uklarheten knyttet til systemtilstanden.
+  \item RQ2 forklarer mekanismen (mentale modeller og manglende samsvar) som fører til feilaktige handlinger.
+  \item RQ3 identifiserer feilene og datainkonsistensene som oppstår som følge av denne mekanismen.
+  \item RQ4 oppfordrer til endringer i design og implementering for å adressere de identifiserte årsakene, noe som bidrar til å forbedre datakonsistensen.
+\end{itemize}
+Oppsummeringen vil følge den kausale sekvensen i forskningsmodellen, og gjøre sammenhengen mellom brukergrensesnitt/brukeropplevelse, systemtilstand og datakonsistens tydelig og etterprøvbar \cite{nielsen1994heuristics,norman2013,wang1996}.
+
+\section{Hva som må oppdateres etter gjennomført brukertesting}
+
+Etter innsamling av data vil jeg oppdatere dette avsnittet ved å:
+\begin{enumerate}
+  \item legge inn empiriske \textbf{bevisdata} for hvert forskningsspørsmål (observasjoner + sitater fra tenke‑høyt‑data/intervjuer).
+  \item oppsummere \textbf{tema} fra tematisk analyse og knytte dem til teorigrep,
+  \item rangere funn etter \textbf{kritikalitet} for datakonsistens (høy/middels/lav),
+  \item avslutte med en \textbf{samlet besvarelse} av problemstillingen basert på RQ-syntesen.
+\end{enumerate}
