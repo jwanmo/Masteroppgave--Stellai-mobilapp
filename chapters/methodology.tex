@@ -14,6 +14,17 @@ Designet kombinerer:
 
 Tilnærmingen gjør det mulig å dokumentere både observerbar atferd og brukerens forståelse og forventninger.
 
+\subsection{Prosjektgjennomføring og fremdrift}
+ 
+Masterprosjektet ble gjennomført som et iterativt løp der utvikling, brukerevaluering og skriving grep inn i hverandre. Den første utviklingsfasen etablerte selve applikasjonen, fra teknologivalg og oppsett av React Native og Firebase til implementering av registreringsflyt, Azure-integrasjon og håndtering av bilder og metadata. Deretter fulgte de to rundene med brukerevaluering, der funnene fra den første undersøkelsen dannet grunnlaget for de målrettede designendringene som ble vurdert på nytt i den andre runden. Selve skrivearbeidet med resultat- og diskusjonskapitlet ble lagt til den avsluttende fasen, slik at de empiriske funnene kunne tolkes opp mot det teoretiske rammeverket. Figur~\ref{fig:gantt} viser fremdriften i denne avsluttende fasen, der de siste utviklingsoppgavene overlapper med brukerevalueringen og skrivearbeidet. En fullstendig oversikt over hele prosjektløpet er gjengitt i appendiks (figur~\ref{fig:gantt-full}).
+ 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Figures/Gantt_sluttfase.png}
+    \caption{Fremdrift i prosjektets avsluttende fase (januar–juni), der de siste utviklingsoppgavene overlapper med brukerevalueringen og skrive- og innleveringsarbeidet.}
+    \label{fig:gantt}
+\end{figure}
+
 \section{Deltakere og rekruttering}
 
 Utvalget er strategisk for å belyse forskjeller mellom tekniske og ikke-tekniske brukere. Planlagt utvalg inkluderer:
@@ -46,6 +57,20 @@ Den første runden av spørreundersøkelsen ble gjennomført i perioden fra 25. 
 
 \subsection{Overordnet utvikling – fra 77,7\% til 86,2\%}
 Gjennomsnittsvurderingen av applikasjonen for spørsmålene Q2 til Q10 økte fra 77,7\% til 86,2\%, noe som tilsvarer en forbedring på 8,5 prosentpoeng. Dette regnes som en positiv indikator på at utviklingen som ble gjort i applikasjonen – der brukernes tilbakemeldinger ble omgjort til konkrete designforbedringer og deretter evaluert på nytt – hadde en tydelig effekt. Samtidig ble gjennomsnittstiden som var nødvendig for å svare, redusert fra 4,0 til 3,2 minutter, noe som tyder på at applikasjonens brukervennlighet ble forbedret. Antallet fritekstkommentarer sank fra 26 til 17, og denne nedgangen gjenspeiler tydelig at sentrale svakheter i brukergrensesnittet ble forbedret, og ikke at brukernes engasjement ble redusert. Kontrollvariabelen Q1 (teknisk erfaring) forble stabil mellom de to rundene (61,3\% mot 59,2\%), noe som reduserer sannsynligheten for at forbedringene skyldes forskjeller i erfaringsnivået i utvalget etter testen. Dette er et viktig punkt for studiens validitet, ettersom et av hovedmålene med utformingen av StellAI er å støtte brukere med ulik teknisk bakgrunn – slik det er beskrevet i forskningsspørsmålet og i avsnitt 1.5 om brukervennlighet i oppgaveorienterte applikasjoner.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/undersokelse_rapport_for_endringer.png}
+    \caption{Resultater fra spørreundersøkelsen før designendringer (n=31). Figuren viser prosentvis gjennomsnittsskår per spørsmål, beregnet som gjennomsnittsskår delt på maksimal skår på 7.}
+    \label{fig:survey-before}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Figures/undersokelse_rapport_etter_endringer.png}
+    \caption{Resultater fra spørreundersøkelsen etter designendringer (n=21). Figuren viser prosentvis gjennomsnittsskår per spørsmål, beregnet som gjennomsnittsskår delt på maksimal skår på 7.}
+    \label{fig:survey-after}
+\end{figure}
 
 \subsection{Spørsmål for spørsmål: størst forbedringer}
 \begin{itemize}
